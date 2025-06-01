@@ -1,14 +1,12 @@
-name: wine_quality_project
+name: Proyecto de demostracion
 
 entry_points:
   elasticnet:
     parameters:
-      alpha: {type: float, default: 0.5}
-      l1_ratio: {type: float, default: 0.5}
-    command: >
-      python homework/src/main.py --model elasticnet --alpha {alpha} --l1_ratio {l1_ratio}
+      alpha: {type: float, default: 0.1}
+      l1_ratio: {type: float, default: 0.1}
+    command: 'python -m homework --model elasticnet --alpha {alpha} --l1_ratio {l1_ratio}'
   knn:
     parameters:
       n_neighbors: {type: int, default: 5}
-    command: >
-      python homework/src/main.py --model knn --n_neighbors {n_neighbors}
+    command: 'python -m homework --model knn --n_neighbors {n_neighbors}'
